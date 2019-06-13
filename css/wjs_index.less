@@ -1,0 +1,158 @@
+// 定义变量
+@baseColor: #e92322;
+
+// 头部样式块
+.wjs_header {
+   height: 50px;
+   border-bottom: 1px solid #ccc;
+   line-height: 50px;
+   text-align: center;
+
+   .row {
+      height: 100%;
+
+      >div:nth-of-type(-n+3) {
+         border-right: 1px solid #ccc;
+
+         >.wjs_code {
+            position: relative;
+            display: block;
+
+            >img {
+               display: none;
+               position: absolute;
+               top: 49px;
+               left: 0;
+               z-index: 999;
+            }
+
+            &:hover {
+               >img {
+                  display: block;
+               }
+            }
+         }
+      }
+
+      div:nth-last-of-type(1)>.btn-danger {
+         background-color: @baseColor;
+         outline: 0;
+      }
+
+      div:nth-last-of-type(1)>.btn-link {
+         outline: 0;
+         text-decoration: none;
+         color: #333;
+      }
+   }
+}
+
+/*导航样式*/
+.wjs_nav {
+   &.navbar {
+      margin-bottom: 0;
+   }
+
+   .navbar-brand {
+      height: 80px;
+      line-height: 50px;
+
+      >span {
+         font-size: 40px;
+      }
+
+      >span:nth-of-type(1) {
+         color: @baseColor;
+      }
+
+      >span:nth-of-type(2) {
+         color: #333;
+      }
+   }
+
+   .navbar-nav {
+      >li {
+         >a {
+            line-height: 50px;
+            font-size: 16px;
+         }
+
+         >a:hover,
+         a:focus {
+            color: #777;
+            border-bottom: 3px solid @baseColor;
+         }
+
+      }
+
+      .active {
+
+         >a,
+         a:hover,
+         a:focus {
+            background-color: transparent;
+            border-bottom: 3px solid @baseColor;
+         }
+      }
+   }
+
+   .navbar-toggle {
+      margin-top: 23px;
+   }
+}
+
+// 轮播图样式
+.wjs_banner {
+   .pcImg {
+      width: 100%;
+      height: 410px;
+      display: block;
+      background-position: center center;
+      background-size: cover;
+   }
+
+   .smallImage {
+      width: 100%;
+      display: block;
+   }
+
+   .smallImage img {
+      width: 100%;
+   }
+}
+
+/*信息块样式*/
+.wjs_info {
+   padding: 30px;
+
+   .wjs_icon {
+      font-size: 30px;
+   }
+
+   .row {
+      .media {
+
+         margin-top: 20px;
+      }
+
+      a:hover {
+         color: @baseColor;
+      }
+   }
+
+}
+
+.wjs_reverse{
+   border-top: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+   height: 60px;
+   line-height: 60px;
+   a:nth-of-type(1):hover{
+      color: @baseColor;
+   }
+   a:nth-of-type(2){
+      color: @baseColor;
+      border-bottom: 1px dashed @baseColor;
+   }
+   
+}
